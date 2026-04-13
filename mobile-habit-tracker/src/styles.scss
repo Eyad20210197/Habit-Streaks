@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Tailwind Colors Extracted from UI Mockup */
+  --primary: #92004c;
+  --primary-container: #be0065;
+  --on-primary: #ffffff;
+  --on-primary-container: #ffd1dc;
+  
+  --secondary: #b5005f;
+  --secondary-container: #e20078;
+  
+  --tertiary: #00561a;
+  --tertiary-container: #007125;
+  --on-tertiary-container: #8ef393;
+  
+  --surface: #fbf9f3;
+  --surface-variant: #e4e2dd;
+  --on-surface: #1b1c18;
+  --on-surface-variant: #594047;
+  
+  --background: #fbf9f3;
+  --on-background: #1b1c18;
+  
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f5f3ed;
+  --surface-container: #f0eee8;
+  --surface-container-high: #eae8e2;
+  --surface-container-highest: #e4e2dd;
+  
+  --success-bg: #3FA34D;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: max(884px, 100dvh);
+  padding-bottom: 8rem;
+  
+  // Centering preview frame
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-label {
+  font-family: 'Inter', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Base Wrapper for Mobile Layout */
+.mobile-app-container {
+  width: 100%;
+  max-width: 42rem; /* 672px max width matching tailwind max-w-2xl */
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--background);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common UI Utilities */
+.custom-shadow {
+  box-shadow: 0 32px 32px -4px rgba(27, 28, 24, 0.06);
+}
+
+.glass-effect {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(251, 249, 243, 0.8);
+}

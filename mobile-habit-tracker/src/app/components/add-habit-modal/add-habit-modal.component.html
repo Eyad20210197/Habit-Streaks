@@ -1,0 +1,69 @@
+<div class="modal-backdrop" (click)="close.emit()">
+  <div class="modal-card modal-animate" (click)="$event.stopPropagation()">
+    <!-- Modal Content -->
+    <div class="modal-body">
+      <header class="modal-header">
+        <h2>New Habit</h2>
+      </header>
+
+      <div class="form-container">
+        <!-- Habit Name Input -->
+        <div class="input-group">
+          <label for="habit-name">Habit Name</label>
+          <input 
+            id="habit-name"
+            type="text" 
+            [(ngModel)]="name"
+            placeholder="e.g., Morning Meditation" 
+            class="habit-input"
+          />
+        </div>
+
+        <!-- Categories -->
+        <div class="input-group">
+          <label>Category</label>
+          <div class="category-chips">
+            <button 
+              *ngFor="let cat of categories"
+              class="chip-btn" 
+              [class.active]="category === cat"
+              (click)="category = cat"
+            >
+              {{ cat }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Icon Grid -->
+        <div class="input-group">
+          <label>Choose Icon</label>
+          <div class="icon-grid">
+            <button 
+              *ngFor="let ic of icons"
+              class="icon-btn-select"
+              [class.active]="ic === icon"
+              (click)="icon = ic"
+            >
+              <span class="material-symbols-outlined">{{ ic }}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Actions -->
+    <footer class="modal-footer">
+      <button 
+        class="save-btn" 
+        [disabled]="!name.trim()"
+        (click)="save()"
+      >
+        <span class="loading-spinner" *ngIf="isLoading"></span>
+        <span *ngIf="!isLoading">Save Habit</span>
+      </button>
+      <button class="cancel-btn" (click)="close.emit()">
+        Cancel
+      </button>
+    </footer>
+  </div>
+</div>

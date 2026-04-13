@@ -1,0 +1,28 @@
+<div class="habit-card group" [class.highlighted]="habit.streak > 5">
+  <div class="card-glow" *ngIf="habit.streak > 5"></div>
+  
+  <div class="card-content">
+    <div class="card-left">
+      <div class="icon-wrap" [class.completed]="isCompletedToday">
+        <span class="material-symbols-outlined" [style.font-variation-settings]="isCompletedToday ? '&quot;FILL&quot; 1, &quot;wght&quot; 400' : '&quot;FILL&quot; 0, &quot;wght&quot; 400'">{{ habit.icon }}</span>
+      </div>
+      
+      <div class="info-stack">
+        <div class="meta-row">
+          <span class="chip" [ngClass]="habit.category.toLowerCase()">{{ habit.category }}</span>
+          <span class="streak-text" *ngIf="habit.streak > 0">
+            <span class="material-symbols-outlined fire-icon">local_fire_department</span>
+            {{ habit.streak }} days
+          </span>
+        </div>
+        <h4 class="habit-title" [class.strikethrough]="isCompletedToday">{{ habit.name }}</h4>
+      </div>
+    </div>
+
+    <!-- Toggles -->
+    <button class="toggle-btn" [class.active]="isCompletedToday" (click)="onToggle.emit()">
+      <span class="material-symbols-outlined" *ngIf="!isCompletedToday">add</span>
+      <span class="material-symbols-outlined" *ngIf="isCompletedToday">check</span>
+    </button>
+  </div>
+</div>

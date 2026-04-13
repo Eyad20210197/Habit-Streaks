@@ -1,0 +1,111 @@
+<div class="calendar-page">
+  <!-- TopAppBar -->
+  <header class="calendar-header">
+    <div class="header-left">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <h1>History</h1>
+    </div>
+    <div class="header-right">
+      <button class="icon-btn">
+        <span class="material-symbols-outlined">search</span>
+      </button>
+      <div class="avatar-ring">
+        <img class="avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnErQ78S4BlQ6vhCjU5x7E4Sq9epFEHPfqlSOexALBgN_agWDqpuJJBUSKBU2537pojkpGTppD6MGgKYWBq7qRVRCFOsrskhPdJpH4Zt5s_UJgacur111Hkl7xIJ2cebeFoKRIvbS-5nRoONaKRUavRzyhOu2zqCO1-h4Xh-TX5a0wtIotnhvahdVi4OubgYQ3AgolNuGqEdadm_EViPv-KqYgO5DOsmqPRNotlP4Htm6nGO2-ZlaTZQh1VLejXI76eSIdbtNfQc"/>
+      </div>
+    </div>
+  </header>
+
+  <main class="calendar-main">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <span class="eyebrow">Your Journey</span>
+      <div class="month-selector">
+        <h2>{{ currentMonth }}</h2>
+        <div class="controls">
+          <button class="control-btn" (click)="prevMonth()">
+            <span class="material-symbols-outlined text-sm">chevron_left</span>
+          </button>
+          <button class="control-btn" (click)="nextMonth()">
+            <span class="material-symbols-outlined text-sm">chevron_right</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Card -->
+    <section class="calendar-card">
+      <div class="days-header">
+        <div class="day-name" *ngFor="let d of ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']">{{ d }}</div>
+      </div>
+      <div class="days-grid">
+        <div *ngFor="let padding of previousMonthDays" class="day-cell opacity-40">
+          {{ padding }}
+        </div>
+        
+        <div *ngFor="let day of calendarCells" class="day-cell" [class.highlight]="day.isToday">
+          <span class="day-num" [class.text-white]="day.isToday">{{ day.day }}</span>
+          
+          <ng-container *ngIf="day.isToday">
+            <div class="today-bg rotate-bg"></div>
+            <div class="today-border"></div>
+          </ng-container>
+
+          <div *ngIf="!day.isToday && day.completionCount > 0" class="completion-dot" [style.opacity]="day.completionCount / habits.length">
+            <div class="dot-inner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Bento Grid -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+        <div class="stat-info">
+          <h4>{{ highestStreak }}</h4>
+          <p>Top Streak</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <span class="material-symbols-outlined text-tertiary text-3xl">task_alt</span>
+        <div class="stat-info">
+          <h4>{{ completionRate | number:'1.0-0' }}%</h4>
+          <p>Completion Rate</p>
+        </div>
+      </div>
+      
+      <!-- Decorative Highlight -->
+      <div class="feature-card group">
+        <div class="feature-content">
+          <h4 class="font-headline text-xl font-bold">The Morning Ritual</h4>
+          <p class="font-body text-sm opacity-80">You've established a solid routine.</p>
+        </div>
+        <span class="material-symbols-outlined feature-icon">auto_awesome</span>
+        <div class="feature-glow"></div>
+      </div>
+    </section>
+
+    <!-- Activity List (For now, just a static rep of the mock context) -->
+    <section class="activity-section">
+      <div class="activity-header">
+        <h3>Daily Log</h3>
+        <button class="view-all-btn">View All</button>
+      </div>
+      
+      <div class="activity-list">
+        <div class="activity-item" *ngFor="let habit of habits | slice:0:3">
+          <div class="activity-icon">
+            <span class="material-symbols-outlined">{{ habit.icon }}</span>
+          </div>
+          <div class="activity-details">
+            <h5>{{ habit.name }}</h5>
+            <p>Recent</p>
+          </div>
+          <div class="activity-status">Tracking</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

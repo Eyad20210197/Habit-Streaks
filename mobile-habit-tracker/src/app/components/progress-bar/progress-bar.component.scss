@@ -1,0 +1,13 @@
+.track {
+  width: 100%;
+  height: 6px;
+  background-color: var(--subtle-layers);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fill {
+  height: 100%;
+  background-color: var(--primary-action);
+  border-radius: 4px;
+  transition: width 300ms ease-in-out;
+}

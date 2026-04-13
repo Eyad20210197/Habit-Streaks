@@ -1,0 +1,217 @@
+.dashboard-main {
+  padding: 2rem 1.5rem;
+}
+
+/* Momentum Section */
+.momentum-section {
+  margin-bottom: 2.5rem;
+}
+
+.momentum-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.title-area h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--on-surface);
+}
+
+.date-text {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+}
+
+.percentage-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.progress-track {
+  height: 0.375rem;
+  width: 100%;
+  background-color: var(--surface-container-highest);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 9999px;
+  box-shadow: 0 0 8px rgba(146, 0, 76, 0.3);
+  transition: width 0.5s ease-out;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+.label-primary, .label-secondary {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.label-primary {
+  color: var(--primary);
+}
+
+.label-secondary {
+  color: rgba(89, 64, 71, 0.4); /* on-surface-variant/40 */
+}
+
+/* Habits List Section */
+.habits-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--on-surface-variant);
+}
+
+.tasks-remaining {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(89, 64, 71, 0.6);
+}
+
+/* Bento Grid */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.bento-card {
+  border-radius: 1.5rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+
+  &.stats {
+    background-color: rgba(234, 232, 226, 0.5); /* surface-container-high/50 */
+  }
+
+  &.rank {
+    background-color: var(--primary-container);
+  }
+}
+
+.bento-card .icon {
+  color: var(--primary);
+  font-size: 1.875rem;
+}
+
+.bento-card .icon-white {
+  color: #fff;
+  font-size: 1.875rem;
+}
+
+.bento-content {
+  position: relative;
+  z-index: 10;
+}
+
+.bento-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(89, 64, 71, 0.6);
+}
+
+.text-white .bento-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bento-value {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--on-surface);
+}
+
+.text-white .bento-value {
+  color: #fff;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  opacity: 0.2;
+  color: #fff;
+}
+
+/* FAB */
+.fab-container {
+  position: fixed;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 42rem; /* Matches the global mobile boundary */
+  pointer-events: none; /* Allows pressing elements behind it */
+  z-index: 50;
+}
+
+.fab-button {
+  position: absolute;
+  bottom: 0;
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--primary-container);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0 32px 32px -4px rgba(27, 28, 24, 0.06);
+  pointer-events: auto; /* Re-enable pointer events for the button */
+  cursor: pointer;
+  transition: transform 150ms;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  .material-symbols-outlined {
+    font-size: 1.875rem;
+  }
+}

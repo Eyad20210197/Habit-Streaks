@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Ritual - Add Habit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .loading-spinner {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 2px solid #ffffff;
+            width: 14px;
+            height: 14px;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .modal-animate {
+            animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: scale(0.95) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#fffbff",
+                      "primary": "#92004c",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#002106",
+                      "on-secondary-fixed": "#3e001d",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e4e2dd",
+                      "outline": "#8d6f77",
+                      "surface-container-highest": "#e4e2dd",
+                      "surface-container-high": "#eae8e2",
+                      "surface-bright": "#fbf9f3",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#f0eee8",
+                      "tertiary-container": "#007125",
+                      "secondary-fixed-dim": "#ffb1c7",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#594047",
+                      "surface-container-low": "#f5f3ed",
+                      "on-tertiary-container": "#8ef393",
+                      "surface": "#fbf9f3",
+                      "primary-fixed-dim": "#ffb1c8",
+                      "background": "#fbf9f3",
+                      "on-primary-fixed-variant": "#8e004a",
+                      "surface-dim": "#dcdad4",
+                      "secondary-fixed": "#ffd9e2",
+                      "error-container": "#ffdad6",
+                      "surface-tint": "#b90062",
+                      "tertiary-fixed": "#93f998",
+                      "primary-container": "#be0065",
+                      "on-background": "#1b1c18",
+                      "secondary": "#b5005f",
+                      "on-tertiary-fixed-variant": "#005319",
+                      "primary-fixed": "#ffd9e2",
+                      "inverse-on-surface": "#f3f1eb",
+                      "on-primary-container": "#ffd1dc",
+                      "inverse-primary": "#ffb1c8",
+                      "tertiary": "#00561a",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e0bec6",
+                      "inverse-surface": "#30312d",
+                      "on-surface": "#1b1c18",
+                      "on-secondary-fixed-variant": "#8e0049",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#78dc7e",
+                      "secondary-container": "#e20078",
+                      "on-primary-fixed": "#3e001d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Poppins"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed antialiased">
+<!-- Blurred Background Content (Dashboard View) -->
+<div class="fixed inset-0 z-0 overflow-hidden pointer-events-none opacity-40">
+<header class="flex justify-between items-center px-6 py-4 w-full">
+<h1 class="text-2xl font-bold text-primary tracking-tight font-headline">The Ritual</h1>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden">
+<img alt="User profile" data-alt="close-up portrait of a professional man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_nCa1ans50XwupbZxijAL61E7enZFPvd6xYjgjixVHrs3AS75gUj6k9hd5b-tD4a6RiFT63Nu78XvrM45t6plN7PoWpH2vRIru_BkSKMiaVLZKG9sxLE0esHojf61LXWqH0Bafk3mQkemMKX2FLVixjnjFJ_4AdFqhLfASgY76lizBFn5Dja3XNQltkTpjiOFsAWvKb-UyVXUD6dpHu46-uxg19nzAVcxx6nY09FHPJ-GsBk0Lmi7hJ7n3afRYJwIYrH3IPz48aw"/>
+</div>
+</header>
+<main class="px-6 py-8">
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low rounded-xl h-40"></div>
+<div class="p-6 bg-surface-container-low rounded-xl h-40"></div>
+<div class="p-6 bg-surface-container-low rounded-xl h-64 col-span-2"></div>
+</div>
+</main>
+</div>
+<!-- Modal Backdrop Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center px-4 bg-[#fbf9f3]/60 backdrop-blur-xl">
+<!-- Modal Card -->
+<div class="modal-animate w-full max-w-md bg-[#f0eee8] rounded-[20px] shadow-[0_12px_32px_rgba(37,0,20,0.1)] overflow-hidden flex flex-col border border-white/20">
+<!-- Modal Content -->
+<div class="p-8">
+<header class="mb-8">
+<h2 class="text-2xl font-headline font-semibold text-[#250014]">New Habit</h2>
+</header>
+<div class="space-y-6">
+<!-- Habit Name Input -->
+<div class="space-y-2">
+<label class="block text-xs font-label font-medium uppercase tracking-widest text-on-surface-variant" for="habit-name">Habit Name</label>
+<input class="w-full bg-[#fbf9f3] border-[#e0bec6] border-opacity-40 rounded-xl px-4 py-3.5 text-on-surface placeholder:text-on-surface-variant/50 focus:ring-2 focus:ring-[#f10080] focus:border-transparent transition-all outline-none" id="habit-name" placeholder="e.g., Morning Meditation" type="text"/>
+</div>
+<!-- Categories -->
+<div class="space-y-3">
+<span class="block text-xs font-label font-medium uppercase tracking-widest text-on-surface-variant">Category</span>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2 rounded-full bg-secondary text-white text-sm font-medium transition-all hover:opacity-90">Health</button>
+<button class="px-5 py-2 rounded-full bg-surface-variant text-on-surface-variant text-sm font-medium hover:bg-outline-variant/30 transition-all">Work</button>
+<button class="px-5 py-2 rounded-full bg-surface-variant text-on-surface-variant text-sm font-medium hover:bg-outline-variant/30 transition-all">Personal</button>
+</div>
+</div>
+<!-- Icon Grid -->
+<div class="space-y-3">
+<span class="block text-xs font-label font-medium uppercase tracking-widest text-on-surface-variant">Choose Icon</span>
+<div class="grid grid-cols-5 gap-3">
+<!-- Selected Icon -->
+<button class="flex items-center justify-center aspect-square rounded-xl bg-primary-fixed text-primary border-2 border-primary/20">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</button>
+<button class="flex items-center justify-center aspect-square rounded-xl bg-[#fbf9f3] text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+</button>
+<button class="flex items-center justify-center aspect-square rounded-xl bg-[#fbf9f3] text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</button>
+<button class="flex items-center justify-center aspect-square rounded-xl bg-[#fbf9f3] text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</button>
+<button class="flex items-center justify-center aspect-square rounded-xl bg-[#fbf9f3] text-on-surface-variant hover:bg-white transition-all">
+<span class="material-symbols-outlined" data-icon="book_2">book_2</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Actions -->
+<footer class="px-8 pb-8 flex flex-col gap-3">
+<button class="w-full bg-[#be0065] text-white py-4 rounded-xl font-semibold flex items-center justify-center gap-3 transition-transform active:scale-[0.98] shadow-lg shadow-primary/10">
+<span class="loading-spinner"></span>
+                    Save Habit
+                </button>
+<button class="w-full bg-transparent border border-[#be0065] text-[#be0065] py-4 rounded-xl font-semibold transition-all hover:bg-primary/5 active:scale-[0.98]">
+                    Cancel
+                </button>
+</footer>
+</div>
+</div>
+<!-- Bottom Navigation Mockup (Filtered as per instruction, but added for visual context of the 'Dashboard' behind) -->
+<nav class="fixed bottom-0 left-0 w-full z-10 flex justify-around items-center px-8 pb-8 pt-4 bg-[#fbf9f3]/80 backdrop-blur-xl rounded-t-[24px] pointer-events-none opacity-20">
+<div class="flex items-center justify-center bg-[#be0065] text-white rounded-full p-3">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex items-center justify-center text-stone-400 p-3">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<div class="flex items-center justify-center text-stone-400 p-3">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+</div>
+<div class="flex items-center justify-center text-stone-400 p-3">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+</nav>
+</body></html>

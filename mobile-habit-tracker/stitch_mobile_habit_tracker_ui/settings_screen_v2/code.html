@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings - The Editorial Ritual</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#93f998",
+                    "surface-container": "#f0eee8",
+                    "inverse-surface": "#30312d",
+                    "secondary-fixed": "#ffd9e2",
+                    "inverse-on-surface": "#f3f1eb",
+                    "primary-fixed": "#ffd9e2",
+                    "on-surface-variant": "#594047",
+                    "background": "#fbf9f3",
+                    "primary-container": "#be0065",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e4e2dd",
+                    "outline-variant": "#e0bec6",
+                    "on-primary-fixed-variant": "#8e004a",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fbf9f3",
+                    "surface": "#fbf9f3",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#002106",
+                    "on-surface": "#1b1c18",
+                    "secondary": "#b5005f",
+                    "surface-container-low": "#f5f3ed",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#3e001d",
+                    "on-primary-fixed": "#3e001d",
+                    "tertiary-container": "#007125",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#ffb1c7",
+                    "inverse-primary": "#ffb1c8",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-highest": "#e4e2dd",
+                    "tertiary-fixed-dim": "#78dc7e",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005319",
+                    "on-secondary-fixed-variant": "#8e0049",
+                    "surface-dim": "#dcdad4",
+                    "surface-tint": "#b90062",
+                    "on-background": "#1b1c18",
+                    "secondary-container": "#e20078",
+                    "tertiary": "#00561a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#ffb1c8",
+                    "primary": "#92004c",
+                    "on-tertiary-container": "#8ef393",
+                    "on-primary-container": "#ffd1dc",
+                    "surface-container-high": "#eae8e2",
+                    "outline": "#8d6f77"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 32px -4px rgba(27, 28, 24, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#f6f4ee] font-body text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-[#fbf9f3] dark:bg-stone-950 flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform text-[#92004c] dark:text-[#f10080]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-xl text-[#1b1c18] dark:text-[#fbf9f3]">Settings</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a woman in minimalist lighting with clean aesthetic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOPEJ6LQIpg52QyAypS-8BPyFDo6Ky2JH7Mzank2IduxC-V7DoCPZGmK-5GvKH-ASMjwU4Et24Jp5I9Ai5vrybVf4Y_nheDnd1tWBk_erCbP1yBlELkfRLoraEY3nGlyeMm-DhbmGtfWlwhSSTqX1p4z3mMyZErc2ojSfq1eVK7_1vQQqzBfE5abBpdQBFZtsEepEhmcxCrqygkt_M-wGF4UOwQPACYiWDaC6Er0CHpTQlYAVDfcqZD6M_AoWLw_oikOBORzteTIQ"/>
+</div>
+</header>
+<main class="max-w-md mx-auto px-6 py-8">
+<!-- Editorial Header -->
+<div class="mb-10">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary font-bold mb-2 block">System Preferences</span>
+<h2 class="font-headline text-3xl font-semibold tracking-tight text-on-surface leading-tight">Your Ritual Workspace</h2>
+<p class="text-on-surface-variant text-sm mt-2 leading-relaxed">Curate your daily flow and maintain the integrity of your personal growth journal.</p>
+</div>
+<!-- Vertical List of Options -->
+<div class="space-y-6">
+<!-- Row 1: Edit Habits -->
+<section class="group">
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center justify-between transition-all hover:bg-surface-container-high">
+<div class="flex flex-col gap-1">
+<span class="font-headline font-semibold text-lg">Habit Collection</span>
+<p class="text-xs text-on-surface-variant">Modify your active rituals and schedules.</p>
+</div>
+<button class="bg-[#E0D9C6] text-[#250014] px-5 py-2.5 rounded-full font-label text-xs font-semibold uppercase tracking-wider active:scale-95 transition-all">
+                        Edit habits
+                    </button>
+</div>
+</section>
+<!-- Row 2: Reset Data -->
+<section>
+<div class="bg-surface-container-low p-6 rounded-xl flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<span class="font-headline font-semibold text-lg">Data Management</span>
+<p class="text-xs text-on-surface-variant">Clear all progress and start fresh.</p>
+</div>
+<button class="border border-[#BE0065] text-[#BE0065] px-5 py-2.5 rounded-full font-label text-xs font-semibold uppercase tracking-wider active:scale-95 transition-all">
+                        Reset data
+                    </button>
+</div>
+</section>
+<!-- Row 3: Premium Features (Locked) -->
+<section>
+<div class="bg-[#E0D9C6]/50 p-6 rounded-xl flex items-center justify-between cursor-not-allowed opacity-80">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline font-semibold text-lg text-[#58002F]/50">Premium Features</span>
+<span class="material-symbols-outlined text-[16px] text-[#58002F]/40" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<p class="text-xs text-[#58002F]/40">Advanced analytics and ritual deep-dives.</p>
+</div>
+<button class="bg-surface-variant/40 text-[#58002F]/50 px-5 py-2.5 rounded-full font-label text-xs font-semibold uppercase tracking-wider cursor-not-allowed" disabled="">
+                        Locked
+                    </button>
+</div>
+</section>
+<!-- Visual Break / Aesthetic Element -->
+<div class="relative w-full h-48 rounded-xl overflow-hidden my-8 editorial-shadow">
+<img class="w-full h-full object-cover" data-alt="top down view of an open minimalist notebook with a fountain pen on a warm stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_AIRDCeUyZQeiZESOSt2a4L6aKhOEQmatScs1Chh3TWWIhPjqkRABCGhwsX_yavGefOTL9-Q41EwqDOnsUNwPEQtMA08kEUmDk4K93-KnulcIJ-ikvDe5ioErxZ1EsWzcFQgPml1K0t7ssKZDsvbKh05m5xss1hB2hdy8lmyxCmV7NIeC219I9w4hIHVejLeMYo-KdGy47qLQEx737of0HXs48RcLI2VjC-8W8x13xcDXeT-R2b7aQ8l5S-_LYnSQ85beeDajQY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="absolute bottom-4 left-6">
+<p class="text-white font-headline text-lg italic">"Progress is a ritual of patience."</p>
+</div>
+</div>
+<!-- Profile / Account Links -->
+<div class="space-y-4">
+<h3 class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant font-bold ml-1">Support &amp; Privacy</h3>
+<div class="flex items-center justify-between px-2 py-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="shield">shield</span>
+<span class="text-sm font-medium">Privacy Policy</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between px-2 py-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="help">help</span>
+<span class="text-sm font-medium">Help Center</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/40" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fbf9f3]/80 dark:bg-stone-950/80 backdrop-blur-xl rounded-t-[24px] shadow-[0_-4px_32px_-4px_rgba(27,28,24,0.06)]">
+<!-- Journal -->
+<a class="flex flex-col items-center justify-center text-[#1b1c18]/40 dark:text-[#fbf9f3]/40 hover:text-[#be0065] transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Journal</span>
+</a>
+<!-- Rituals -->
+<a class="flex flex-col items-center justify-center text-[#1b1c18]/40 dark:text-[#fbf9f3]/40 hover:text-[#be0065] transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="flare">flare</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Rituals</span>
+</a>
+<!-- Insights -->
+<a class="flex flex-col items-center justify-center text-[#1b1c18]/40 dark:text-[#fbf9f3]/40 hover:text-[#be0065] transition-colors active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Insights</span>
+</a>
+<!-- Settings (Active) -->
+<a class="flex flex-col items-center justify-center text-[#92004c] dark:text-[#f10080] font-bold active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium uppercase tracking-widest mt-1">Settings</span>
+</a>
+</nav>
+</body></html>

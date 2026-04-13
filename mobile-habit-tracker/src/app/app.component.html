@@ -1,0 +1,20 @@
+<div class="mobile-app-container">
+  <div class="page-content">
+    <router-outlet></router-outlet>
+  </div>
+  
+  <nav class="bottom-nav">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item">
+      <span class="material-symbols-outlined">home</span>
+      <span class="nav-label">Home</span>
+    </a>
+    <a routerLink="/calendar" routerLinkActive="active" class="nav-item">
+      <span class="material-symbols-outlined">calendar_month</span>
+      <span class="nav-label">History</span>
+    </a>
+    <a routerLink="/settings" routerLinkActive="active" class="nav-item">
+      <span class="material-symbols-outlined">settings</span>
+      <span class="nav-label">Settings</span>
+    </a>
+  </nav>
+</div>

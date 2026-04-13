@@ -1,0 +1,9 @@
+<div class="progress-container">
+  <div class="d-flex justify-between align-center" style="margin-bottom: 8px;">
+    <span class="text-secondary" style="font-size: 0.85rem; font-weight: 500;">Weekly Progress</span>
+    <span style="font-weight: 600; color: var(--primary-action);">{{ percentage | number:'1.0-0' }}%</span>
+  </div>
+  <div class="track">
+    <div class="fill" [style.width.%]="percentage"></div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<app-header></app-header>
+<main class="dashboard-main">
+  <!-- Weekly Progress Section -->
+  <section class="momentum-section">
+    <div class="momentum-header">
+      <div class="title-area">
+        <h2>Weekly Momentum</h2>
+        <p class="date-text">{{ today | date:'EEEE, MMM d' }}</p>
+      </div>
+      <div class="percentage-area">
+        <span class="percentage-value">{{ progressPercentage }}%</span>
+      </div>
+    </div>
+    
+    <div class="progress-track">
+      <div class="progress-fill" [style.width.%]="progressPercentage"></div>
+    </div>
+    
+    <div class="progress-labels">
+      <span class="label-primary" *ngIf="progressPercentage < 100">Focused</span>
+      <span class="label-primary" *ngIf="progressPercentage === 100">Perfect</span>
+      <span class="label-secondary" *ngIf="progressPercentage < 100">Next: {{ progressPercentage === 0 ? 14 : progressPercentage + 14 | number:'1.0-0' }}%</span>
+    </div>
+  </section>
+
+  <!-- Main Content: Habit List -->
+  <div class="habits-list-section">
+    <div class="section-header">
+      <h3>Today's Rituals</h3>
+      <span class="tasks-remaining">{{ habits.length - completedToday }} Tasks remaining</span>
+    </div>
+
+    <app-habit-card *ngFor="let habit of habits" [habit]="habit" (onToggle)="toggleHabit(habit.id)"></app-habit-card>
+
+    <!-- Bento-style Analytics Teaser (Static implementation based on feedback) -->
+    <div class="bento-grid">
+      <div class="bento-card stats">
+        <span class="material-symbols-outlined icon">insights</span>
+        <div class="bento-content">
+          <p class="bento-label">Consistency</p>
+          <h5 class="bento-value">+14%</h5>
+        </div>
+      </div>
+      <div class="bento-card rank group-highlight">
+        <div class="bg-pattern">
+          <span class="material-symbols-outlined text-6xl">workspace_premium</span>
+        </div>
+        <span class="material-symbols-outlined icon-white">stars</span>
+        <div class="bento-content text-white">
+          <p class="bento-label">Level</p>
+          <h5 class="bento-value">Zen Master</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FAB -->
+<div class="fab-container">
+  <button class="fab-button" (click)="openModal()">
+    <span class="material-symbols-outlined">add</span>
+  </button>
+</div>
+
+<app-add-habit-modal *ngIf="isModalOpen" (close)="closeModal()"></app-add-habit-modal>

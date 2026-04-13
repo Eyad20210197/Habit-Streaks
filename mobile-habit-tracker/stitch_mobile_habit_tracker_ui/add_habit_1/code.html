@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Ritual | New Habit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb1c7",
+                    "inverse-primary": "#ffb1c8",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-secondary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed-dim": "#78dc7e",
+                    "surface-dim": "#dcdad4",
+                    "on-secondary-fixed-variant": "#8e0049",
+                    "on-tertiary-fixed-variant": "#005319",
+                    "surface-tint": "#b90062",
+                    "on-background": "#1b1c18",
+                    "on-tertiary-container": "#8ef393",
+                    "primary": "#92004c",
+                    "primary-fixed-dim": "#ffb1c8",
+                    "tertiary": "#00561a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#e20078",
+                    "surface-container-high": "#eae8e2",
+                    "on-primary-container": "#ffd1dc",
+                    "outline": "#8d6f77",
+                    "inverse-surface": "#30312d",
+                    "tertiary-fixed": "#93f998",
+                    "surface-container": "#f0eee8",
+                    "inverse-on-surface": "#f3f1eb",
+                    "secondary-fixed": "#ffd9e2",
+                    "background": "#fbf9f3",
+                    "on-surface-variant": "#594047",
+                    "primary-fixed": "#ffd9e2",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#e0bec6",
+                    "on-primary-fixed-variant": "#8e004a",
+                    "surface-variant": "#e4e2dd",
+                    "primary-container": "#be0065",
+                    "on-error-container": "#93000a",
+                    "surface": "#fbf9f3",
+                    "surface-bright": "#fbf9f3",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "secondary": "#b5005f",
+                    "on-surface": "#1b1c18",
+                    "on-tertiary-fixed": "#002106",
+                    "tertiary-container": "#007125",
+                    "on-primary-fixed": "#3e001d",
+                    "on-secondary-fixed": "#3e001d",
+                    "surface-container-low": "#f5f3ed",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1.25rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-modal-overlay {
+            background-color: rgba(27, 28, 24, 0.4);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen">
+<!-- Top Navigation (Shell Component) -->
+<header class="w-full top-0 sticky bg-[#fbf9f3] dark:bg-[#1b1c18] z-40">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a serene young woman with soft natural lighting and neutral background colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALD5NZUrL34KfRfSNadUZ3seX8D8Ijg_coyJfv1Dgz-SCRu9n9tJUWrlB2kuTb00zR_fT-uTIyY6s1eZSYTpvhkU5BBhcZpTg29WVTeDKpu7T6eyFxMUqG16yH3xb04Zu5EZpTxgzzjeY4iCjzSaZ-k3_Ib8vpYGjgnAeCO3VlbVdrtD9nw1jgepWclPm4_1CU-0_qIf7a9BI81ExxUfgJm4G0JDsGa418QRmCi7n1R5Q6pVCZq87eqZIzWVGv7-0LqJODgfJaCok"/>
+</div>
+<h1 class="font-headline font-bold text-xl tracking-tight text-[#92004c] dark:text-[#ffb2be]">The Ritual</h1>
+</div>
+<button class="text-[#48483e] dark:text-[#c9c8ba] hover:bg-[#f2efe4] dark:hover:bg-[#2d2e28] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+<div class="bg-[#f2efe4] dark:bg-[#2d2e28] h-[1px]"></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="max-w-md mx-auto px-6 pt-8 pb-32">
+<!-- Dashboard Content Background (Simulated) -->
+<div class="space-y-8 opacity-40 select-none pointer-events-none">
+<section>
+<h2 class="font-headline text-3xl font-bold tracking-tight mb-2">Today's Ritual</h2>
+<p class="text-on-surface-variant font-medium">3 of 5 habits completed</p>
+</section>
+<div class="grid gap-4">
+<div class="bg-surface-container-low p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_stories</span>
+</div>
+<div>
+<h3 class="font-semibold">Morning Reading</h3>
+<p class="text-sm text-on-surface-variant">15 mins remaining</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant"></div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<h3 class="font-semibold">Yoga Session</h3>
+<p class="text-sm text-on-surface-variant">Completed at 8:00 AM</p>
+</div>
+</div>
+<div class="w-6 h-6 rounded-full bg-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-xs">done</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-modal-overlay">
+<!-- Add Habit Modal -->
+<div class="bg-[#f6f4ee] w-full max-w-[380px] rounded-2xl shadow-[0_32px_64px_-12px_rgba(27,28,24,0.14)] overflow-hidden border border-[#e0d9c6] animate-in fade-in zoom-in duration-300">
+<div class="px-6 pt-8 pb-6">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-8">New Habit</h2>
+<form class="space-y-8">
+<!-- Habit Name Field -->
+<div class="space-y-2">
+<label class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Habit Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-4 text-on-surface placeholder:text-outline-variant focus:ring-2 focus:ring-[#f10080] transition-shadow duration-200" placeholder="e.g., Read for 20 mins" type="text"/>
+</div>
+<!-- Category Field -->
+<div class="space-y-3">
+<label class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Category</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-5 py-2.5 rounded-full bg-secondary text-on-secondary text-sm font-semibold transition-all" type="button">Health</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant text-sm font-medium hover:bg-outline-variant/20 transition-all" type="button">Work</button>
+<button class="px-5 py-2.5 rounded-full bg-surface-variant text-on-surface-variant text-sm font-medium hover:bg-outline-variant/20 transition-all" type="button">Personal</button>
+</div>
+</div>
+<!-- Icon Picker Field -->
+<div class="space-y-3">
+<label class="font-label text-[10px] font-bold uppercase tracking-widest text-on-surface-variant px-1">Icon Selection</label>
+<div class="grid grid-cols-4 gap-3">
+<!-- Grid 4x3 items -->
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">fitness_center</span>
+</button>
+<button class="aspect-square rounded-xl bg-primary-fixed border-2 border-[#f10080] flex items-center justify-center text-primary" type="button">
+<span class="material-symbols-outlined">menu_book</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">water_drop</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">mindfulness</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">sunny</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">forest</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">spa</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">palette</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">lightbulb</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">pixel_journal</span>
+</button>
+<button class="aspect-square rounded-xl bg-surface-container-lowest border-2 border-transparent hover:border-outline-variant flex items-center justify-center text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">coffee</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Modal Footer -->
+<div class="px-6 pb-8 pt-4 flex flex-col gap-3">
+<button class="w-full bg-[#be0065] text-white font-semibold py-4 rounded-xl shadow-lg shadow-[#be0065]/20 active:scale-[0.98] transition-all duration-200">
+                    Save Habit
+                </button>
+<button class="w-full text-on-surface-variant font-medium py-2 rounded-xl hover:bg-surface-container text-sm transition-colors">
+                    Cancel
+                </button>
+</div>
+</div>
+</div>
+<!-- Navigation Shell (Bottom) -->
+<nav class="fixed bottom-0 w-full rounded-t-[24px] z-50 bg-[#fbf9f3]/80 backdrop-blur-xl shadow-[0_-4px_32px_rgba(27,28,24,0.06)]">
+<div class="flex justify-around items-center pt-3 pb-8 px-4 w-full">
+<a class="flex flex-col items-center gap-1 text-[#92004c] dark:text-[#ffb2be] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#797869] dark:text-[#939282] active:scale-90 transition-transform duration-150 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Calendar</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#797869] dark:text-[#939282] active:scale-90 transition-transform duration-150 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#797869] dark:text-[#939282] active:scale-90 transition-transform duration-150 hover:opacity-80" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[11px] font-medium uppercase tracking-wider">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>

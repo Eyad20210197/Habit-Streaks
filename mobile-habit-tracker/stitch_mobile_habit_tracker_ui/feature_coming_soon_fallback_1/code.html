@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#b5005f",
+                        "secondary-fixed-dim": "#ffb1c7",
+                        "outline-variant": "#e0bec6",
+                        "secondary-fixed": "#ffd9e2",
+                        "background": "#fbf9f3",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#eae8e2",
+                        "on-secondary-fixed-variant": "#8e0049",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#3e001d",
+                        "tertiary-container": "#007125",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#f3f1eb",
+                        "primary-fixed": "#ffd9e2",
+                        "primary": "#92004c",
+                        "inverse-surface": "#30312d",
+                        "tertiary-fixed": "#93f998",
+                        "on-primary": "#ffffff",
+                        "surface": "#fbf9f3",
+                        "surface-variant": "#e4e2dd",
+                        "tertiary": "#00561a",
+                        "surface-container": "#f0eee8",
+                        "surface-bright": "#fbf9f3",
+                        "on-tertiary-container": "#8ef393",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#3e001d",
+                        "inverse-primary": "#ffb1c8",
+                        "on-background": "#1b1c18",
+                        "surface-tint": "#b90062",
+                        "primary-fixed-dim": "#ffb1c8",
+                        "on-primary-fixed-variant": "#8e004a",
+                        "surface-dim": "#dcdad4",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e20078",
+                        "on-surface-variant": "#594047",
+                        "outline": "#8d6f77",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#78dc7e",
+                        "surface-container-low": "#f5f3ed",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-tertiary-fixed-variant": "#005319",
+                        "on-tertiary-fixed": "#002106",
+                        "on-primary-container": "#ffd1dc",
+                        "primary-container": "#be0065",
+                        "on-surface": "#1b1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-magenta {
+            filter: drop-shadow(0 0 15px rgba(190, 0, 101, 0.4));
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #92004c 0%, #be0065 100%);
+        }
+        body {
+            background-color: #fbf9f3;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-[#fbf9f3] dark:bg-[#1b1c18] z-50">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#92004c] dark:text-[#ffb2be]">menu</span>
+</div>
+<h1 class="text-xl font-bold tracking-tighter text-[#92004c] dark:text-[#ffb2be] font-headline">The Ritual</h1>
+<div class="w-6"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-6 relative">
+<!-- Floating Magic Spark Icons (Decorative) -->
+<div class="absolute top-20 left-[10%] opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-4xl transform rotate-12" style="font-variation-settings: 'FILL' 1;">flare</span>
+</div>
+<div class="absolute bottom-40 right-[15%] opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-5xl transform -rotate-12" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute top-1/2 left-[5%] opacity-10 pointer-events-none hidden md:block">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+</div>
+<!-- Hero Content Section -->
+<div class="max-w-2xl w-full text-center space-y-8 z-10 pt-10">
+<!-- Icon/Illustration Container -->
+<div class="relative inline-block">
+<div class="w-32 h-32 md:w-48 md:h-48 rounded-full bg-primary-container/10 flex items-center justify-center mx-auto relative overflow-visible">
+<div class="absolute inset-0 rounded-full blur-3xl bg-primary-container/20"></div>
+<span class="material-symbols-outlined text-primary-container text-7xl md:text-9xl glow-magenta" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+</div>
+</div>
+<!-- Typography Cluster -->
+<div class="space-y-4">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-primary tracking-tight leading-tight px-4">
+                    This Feature is Coming Soon!
+                </h2>
+<p class="text-on-surface-variant text-lg md:text-xl font-body max-w-lg mx-auto leading-relaxed">
+                    We're currently crafting this part of 'The Ritual' experience to ensure it's as magical as your journey.
+                </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+<button class="editorial-gradient text-white px-8 py-4 rounded-full font-headline font-semibold text-lg shadow-[0_8px_32px_rgba(146,0,76,0.2)] active:scale-95 transition-all duration-200 w-full sm:w-auto">
+                    Notify Me
+                </button>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-8 py-4 rounded-full font-headline font-semibold text-lg active:scale-95 transition-all duration-200 w-full sm:w-auto">
+                    Return to App
+                </button>
+</div>
+</div>
+<!-- Bento Glimpse (Asymmetric Sneak Peek) -->
+<div class="mt-20 w-full max-w-5xl grid grid-cols-1 md:grid-cols-3 gap-6 pb-32">
+<div class="md:col-span-2 bg-surface-container-low rounded-3xl p-8 flex flex-col justify-between aspect-video md:aspect-auto border border-outline-variant/10">
+<div>
+<span class="inline-block px-3 py-1 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[0.2em] rounded-full mb-4">Under Construction</span>
+<h3 class="text-2xl font-headline font-semibold text-on-surface">Community Circles</h3>
+</div>
+<div class="flex items-center gap-4 mt-6">
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-3/4 h-full editorial-gradient"></div>
+</div>
+<span class="text-sm font-label font-medium text-primary">75% Built</span>
+</div>
+<div class="mt-6 flex -space-x-3">
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDJmV4MNHj7ykbESzup8OLNgfZJi2rOuIq09nqJgSblPzK2P1xLp0RLmSkz20JsmUmV8B3U-sOfhHDCmZstVxLQyPjFbl39U_30QTdz51LmwtAfCpXNNLuslkrX7JewsDNJ3u6ZzfSgCV_PP1Uq2bj9sIRXEEXgcxEjaAxqabWFwHFlUz_tR9lvseaZ5xk2y9Mqqx41zHce5ck8RvXKlcleVCySflx7kDUrAVze4IAOOpJQ0qB2u9_XBzMFpuUyiE8hlCQR6HdK9w"/>
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Na-xj7q9EQLW6fp2Cf_BgZd8oyX75Cv-hYoBa5o5gBW5p5R5g_T8rho7LS5kgRehhXD9fE7Oos8fC_PObymdyrfJkP2hG8Acu_aOneQGg76UbVCb0xbF2DgBUnZdzxF2igz2MtTz9ttICeQ4ym_ubLKtqNFUv60LSIhZu0E6jhanAQSg6lGeQVu_T3lFI9KMCaDY47pif-dpCeRB3oG70dXirVgOyOLHsqFVhJxAyjzMQXn82Ak7G3R45sm8TtBbsp89pdm-HBA"/>
+<img alt="Member" class="w-10 h-10 rounded-full border-2 border-background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9QhhbpoaNAnbzNv5CV-2yxj6Hd17J7eTXQHuVVOAuKxvAZEyUJ6SzXyY_oN6BrO8TlRKqH5Cn_rfKI-gY_OdRsyPH88628pctPxUYjFDYWCIqecTIVVGPKdr1vTIyYChXA2XiwBEU4y6dm-qTPrsoqrRd0PID25d3EXGg1cxA6hILTQnpgqsf7fx4v5z9FgIyuun4XGlOXQEUBI_fjP2slAwoLM_FTtrM3M1aLJfAOckL0e7V3IQLQP9EWJm_dtiEzfjBNz8wcGc"/>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest border-2 border-background flex items-center justify-center text-[10px] font-bold">+12k</div>
+</div>
+</div>
+<div class="bg-primary/5 rounded-3xl p-8 flex flex-col items-center justify-center text-center space-y-4 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<h3 class="text-xl font-headline font-semibold text-on-surface">Deep Insights</h3>
+<p class="text-sm text-on-surface-variant">Advanced metabolic tracking integrated with your daily flow.</p>
+</div>
+</div>
+</main>
+<!-- Prominent Return Footer -->
+<footer class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-auto md:min-w-[400px] z-50">
+<button class="w-full bg-background/95 backdrop-blur-xl rounded-full px-8 py-5 flex items-center justify-center gap-4 shadow-[0_12px_48px_rgba(146,0,76,0.15)] border border-outline-variant/30 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-primary text-xl font-bold">chevron_left</span>
+<span class="text-sm font-headline font-extrabold uppercase tracking-[0.2em] text-primary">Return to Journal</span>
+<div class="w-6 h-6"></div>
+</button>
+</footer>
+</body></html>
