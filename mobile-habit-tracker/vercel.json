@@ -1,6 +1,7 @@
 {
   "version": 2,
   "framework": "angular",
+  "outputDirectory": "dist/mobile-habit-tracker/browser",
   "routes": [
     {
       "handle": "filesystem"
