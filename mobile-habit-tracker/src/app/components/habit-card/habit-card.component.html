@@ -1,6 +1,4 @@
-<div class="habit-card group" [class.highlighted]="habit.streak > 5">
-  <div class="card-glow" *ngIf="habit.streak > 5"></div>
-  
+<div class="habit-card group" [appStreakHighlight]="habit.streak">
   <div class="card-content">
     <div class="card-left">
       <div class="icon-wrap" [class.completed]="isCompletedToday">
